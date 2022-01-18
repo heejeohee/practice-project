@@ -27,12 +27,16 @@ int main(int argc, char *argv[])
     normal_employee *person4= new normal_employee("sben",'B');
     listhandler.makelist(person4);
 
-    while(control!=7){
+    while(control<8){
         cout<<"-------------------------"<<endl;
         cout<< " 1.등록 하기\n 2.출퇴근시간 입력\n 3.업무 등록\n 4.업무 진도\n 5.급여 조회\n 6.직원 목록\n 7.종료"<<endl;
         cout<<"-------------------------"<<endl;
         cin>>control;
         cout<<"\n";
+        if(cin.fail()) cout<<"!!번호를 입력하세요!!"<<endl;
+        cin.clear();            //quite error
+        cin.ignore(256,'\n');   //reset control
+
         /*
         if(control==1)
             handler.Addemployee();
@@ -60,7 +64,7 @@ int main(int argc, char *argv[])
             listhandler.getPay();
         else if(control==6) listhandler.ShowAlllist();
         else if(control==7)    cout<<"-----Good Bye-----\n";
-        else cout<< "!!ERROR!!"<<endl;
+        else cout << "!!ERROR!!"<<endl;
     }
     return 0;
 
