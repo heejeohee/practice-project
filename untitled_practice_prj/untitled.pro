@@ -27,18 +27,22 @@ SOURCES += \
         main.cpp \
         practice_pj.cpp \
     employee.cpp \
-    atypeemployee.cpp \
-    btypeemployee.cpp \
-    ctypeemployee.cpp \
-    employeehandler.cpp
+    employeehandler.cpp \
+    normal_employee.cpp \
+    base_employee.cpp \
+    A_employee.cpp \
+    B_employee.cpp \
+    C_employee.cpp
 
 HEADERS += \
         practice_pj.h \
     employee.h \
-    atypeemployee.h \
-    btypeemployee.h \
-    ctypeemployee.h \
-    employeehandler.h
+    employeehandler.h \
+    normal_employee.h \
+    base_employee.h \
+    A_employee.h \
+    B_employee.h \
+    C_employee.h
 
 FORMS += \
         practice_pj.ui

@@ -1,11 +1,12 @@
-#include "atypeemployee.h"
+#include "first_employee.h"
 
-AtypeEmployee::AtypeEmployee(string name):employee(name, 'A'){
+AtypeEmployee::AtypeEmployee(string name, char timeType):BaseEmployee(name, timeType, 1){
 
 }
 void AtypeEmployee::showNametype(){
     showName();
-    cout << "A 타임 근무 : 오전 8시 출근 오후 5시 퇴근입니다." << endl;
+    showrank();
+    showtype();
 }
 void AtypeEmployee :: getRealtime(){
     cout<< "출근 시간 입력 : ";
@@ -22,16 +23,8 @@ int AtypeEmployee :: CalWorkTime(){
     return -(diffin-diffout)+8;
 }
 void AtypeEmployee :: massegeIn(){
-    if(realIn>8)
-        cout<<"Late!"<<endl;
-    else
-        cout<<"Have a good time"<<endl;
+    BaseEmployee::massegeIn();
 }
 void AtypeEmployee :: massegeOut(){
-    if(realOut>17)
-        cout<<"Push botton\n"<<endl;
-    else if(realOut<16)
-        cout<<"Too early\n"<<endl;
-    else
-        cout<<"Good Bye\n"<<endl;
+    BaseEmployee::massegeOut();
 }

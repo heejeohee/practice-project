@@ -2,20 +2,26 @@
 #define EMPLOYEEHANDLER_H
 #pragma once
 #include <employee.h>
+#include <base_employee.h>
 #define SIZE 100
 
 class employeeHandler
 {
-    employee* PerList[SIZE];
-    int listnum;
+    BaseEmployee* PerList[SIZE];
+    int listnum=0, ranknum;
     char timeType;
     string you;
 public:
     employeeHandler();
-    void Addemployee(int empCount);
+    void makelist(BaseEmployee*p);
+    int Getlistnum();
+    void Addemployee();
     void ShowAlllist();
     void ShowNandT(int k);
-    void Getreal(int k);
+    void Getreal();
+    void ChoiceWork();
+    void Work();
+    void getPay();
 
 };
 

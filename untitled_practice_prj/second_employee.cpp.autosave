@@ -1,0 +1,29 @@
+#include "second_employee.h"
+
+BtypeEmployee::BtypeEmployee(string name, char timeType):BaseEmployee(name, timeType, 2){}
+void BtypeEmployee :: showNametype(){
+    showName();
+    showrank();
+    showtype();
+}
+void BtypeEmployee :: getRealtime(){
+    cout<< "출근 시간 입력 : ";
+    cin >> realIn;
+    massegeIn();
+    cout<<"\n"<<"퇴근 시간 입력 : ";
+    cin>>realOut;
+    massegeOut();
+}
+int BtypeEmployee :: CalWorkTime(){
+    int diffin, diffout;
+    diffin=realIn-9;
+    diffout=realOut-18;
+    return -(diffin-diffout)+8;
+}
+void BtypeEmployee :: massegeIn(){
+    BaseEmployee::massegeIn();
+}
+void BtypeEmployee :: massegeOut(){
+    BaseEmployee::massegeOut();
+
+}

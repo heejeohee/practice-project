@@ -5,18 +5,17 @@
 using namespace std;
 class employee
 {
-protected:
-    string Name;
-    char Type;
 public:
-    employee(string N, char T);
-    void showName();
+    employee(){};
     virtual void getRealtime()=0;
-    virtual void showNametype()=0;
     virtual int CalWorkTime()=0;
     virtual void massegeOut()=0;
     virtual void massegeIn()=0;
-    ~employee();
+    virtual int Searchname(string fname)=0;
+    virtual void Choicework()=0;
+    virtual void Working()=0;
+    virtual void Pay()=0;
+    ~employee(){};
 };
 
 
