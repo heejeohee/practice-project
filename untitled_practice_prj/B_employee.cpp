@@ -8,11 +8,11 @@ void BtypeEmployee :: getRealtime(){
 int BtypeEmployee :: CalWorkTime(){
     return realOut-realIn-9;        //기준 근무시간인 8시간과의 차이
 }
-void BtypeEmployee :: massegeIn(){
-    BaseEmployee::massegeIn();
+void BtypeEmployee :: messageIn(){
+    BaseEmployee::messageIn();
 }
-void BtypeEmployee :: massegeOut(){
-    BaseEmployee::massegeOut();
+void BtypeEmployee :: messageOut(){
+    BaseEmployee::messageOut();
 }
 int BtypeEmployee:: Searchname(string fname){
     int anwser=BaseEmployee::Searchname(fname);

@@ -10,15 +10,16 @@ void AtypeEmployee :: getRealtime(){
 int AtypeEmployee :: CalWorkTime(){
     return realOut-realIn-9;        //기준 근무시간인 8시간과의 차이
 }
-void AtypeEmployee :: massegeIn(){
-    BaseEmployee::massegeIn();
+void AtypeEmployee :: messageIn(){
+    BaseEmployee::messageIn();
 }
-void AtypeEmployee :: massegeOut(){
-    BaseEmployee::massegeOut();
+void AtypeEmployee :: messageOut(){
+    BaseEmployee::messageOut();
 }
 int AtypeEmployee:: Searchname(string fname){
-    int anwser=BaseEmployee::Searchname(fname);
-    return anwser;
+  //  int anwser=BaseEmployee::Searchname(fname);
+  //  return anwser;
+   return BaseEmployee::Searchname(fname);
 }
 void AtypeEmployee::Choicework(){
     BaseEmployee::Choicework();

@@ -11,11 +11,11 @@ void CtypeEmployee:: getRealtime(){
 int CtypeEmployee:: CalWorkTime(){
     return realOut-realIn-9;        //기준 근무시간인 8시간과의 차이
 }
-void CtypeEmployee:: massegeIn(){
-    BaseEmployee::massegeIn();
+void CtypeEmployee:: messageIn(){
+    BaseEmployee::messageIn();
 }
-void CtypeEmployee:: massegeOut(){
-    BaseEmployee::massegeOut();
+void CtypeEmployee:: messageOut(){
+    BaseEmployee::messageOut();
 }
 int CtypeEmployee:: Searchname(string fname){
     int anwser=BaseEmployee::Searchname(fname);

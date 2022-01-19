@@ -5,13 +5,12 @@
 
 class CtypeEmployee : public BaseEmployee
 {
-    double progress;
 public:
     CtypeEmployee(string name, char timeType);
     void getRealtime() override;
     int CalWorkTime() override;
-    void massegeIn() override;
-    void massegeOut() override;
+    void messageIn() override;
+    void messageOut() override;
     int Searchname(string fname) override;
     void Choicework() override;
     void Working() override;

@@ -1,8 +1,5 @@
 #include "employeehandler.h"
-#include <A_employee.h>
-#include <B_employee.h>
-#include<C_employee.h>
-#include<normal_employee.h>
+#include <all_employee.h>
 
 employeeHandler::employeeHandler(){
 }
@@ -21,7 +18,7 @@ void employeeHandler::Addemployee(){
     for(int i=0;i<people;i++){
         cout<< "이름을 입력하세요. : "<<endl;
         cin>>you;
-        cout<< "근무 시간을 입력하세요. : "<<endl;
+        cout<< "근무 시간 유형을 입력하세요. : "<<endl;
         cin>>timeType;
         cout<< "직책을 입력하세요. : "<<endl;
         cin>>ranknum;
@@ -44,11 +41,11 @@ void employeeHandler::Addemployee(){
     }
 }
 void employeeHandler::ShowAlllist(){
-    for(int i=0;i<listnum;i++) {cout<<i<<" ";
-        PerList[i]->showName();
+    for(int i=0;i<listnum;i++) {cout<<i+1<<" ";
+        ShowAll(i);
         cout<<endl;}
 }
-void employeeHandler::ShowNandT(int k){
+void employeeHandler::ShowAll(int k){
     PerList[k]->showName();
     PerList[k]->showtype();
     PerList[k]->showrank();
@@ -75,7 +72,8 @@ void employeeHandler::ChoiceWork(){
         if(PerList[i]->Searchname(fname)==1) {idx=i;break;}
     if(idx==-1) cout<<"목록에 없음\n";
     else {PerList[idx]->Choicework();
-        PerList[idx]->showName();}
+       // PerList[idx]->showName();
+    }
 }
 void employeeHandler::Work(){
     int idx=-1;

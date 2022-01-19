@@ -4,13 +4,13 @@
 #include <base_employee.h>
 
 class normal_employee : public BaseEmployee
-{   int progress;
+{
 public:
     normal_employee(string name, char timeType);
     void getRealtime() override;
     int CalWorkTime() override;
-    void massegeIn() override;
-    void massegeOut() override;
+    void messageIn() override;
+    void messageOut() override;
     int Searchname(string fname) override;
     void Choicework() override;
     void Working() override;

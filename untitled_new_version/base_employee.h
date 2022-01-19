@@ -6,7 +6,7 @@
 class BaseEmployee:public employee
 {
 protected:
-    int Rank, worklevel;
+    int Rank, worklevel=0;
     int realIn, realOut;
     double progress=0.0;
     string Name;
@@ -18,7 +18,7 @@ public:
     void showrank();
     void showwork();
     void getRealtime() override;
-    int CalWorkTime();
+    int CalWorkTime() override;
     void messageOut() override;
     void messageIn() override;
     int Searchname(string fname) override;

@@ -21,6 +21,7 @@ void BaseEmployee::showwork(){
     else if(worklevel==3) cout << "Work level : 3\n";
     else if(worklevel==2) cout << "Work level : 2\n";
     else if(worklevel==1) cout << "Work level : 1\n";
+    else cout<< "업무 미등록\n";
 }
 void BaseEmployee::getRealtime(){
     cout<< "출근 시간 입력 : ";
@@ -31,7 +32,8 @@ void BaseEmployee::getRealtime(){
     messageOut();
 }
 int BaseEmployee:: CalWorkTime(){
-
+    if(Rank==4)     return realOut-realIn-1;    // 근무시간
+    else     return realOut-realIn-9;        //기준 근무시간인 8시간과의 차이
 }
 void BaseEmployee:: messageOut(){
     if(Type=='A'){
@@ -85,17 +87,15 @@ int BaseEmployee ::Searchname(string fname){
     return answer;
 }
 void BaseEmployee::Choicework(){
-   for(int i=0;i<1;i++){
+   progress=0.0;
+    for(int i=0;i<1;i++){
     cout<< "work level : " ;
     cin>>worklevel;
-    if(Rank==4&&worklevel!=1){ i--; cout<<"work level 조정 필요\n";}
-    else if (Rank==3&&(worklevel==3||worklevel==4)) { i--; cout<<"work level 조정 필요\n";}
+    if(worklevel>5-Rank){i--; cout<<"work level 조정 필요\n";}
    }
 }
 void BaseEmployee ::Working(){
- 
 }
 void BaseEmployee ::Pay(){
-
 }
 

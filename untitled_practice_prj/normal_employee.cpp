@@ -10,11 +10,11 @@ void normal_employee:: getRealtime(){
 int normal_employee:: CalWorkTime(){
     return realOut-realIn-1;    // 근무시간
 }
-void normal_employee:: massegeIn(){
-    BaseEmployee::massegeIn();
+void normal_employee:: messageIn(){
+    BaseEmployee::messageIn();
 }
-void normal_employee:: massegeOut(){
-    BaseEmployee::massegeOut();
+void normal_employee:: messageOut(){
+    BaseEmployee::messageOut();
 }
 int normal_employee:: Searchname(string fname){
     int anwser=BaseEmployee::Searchname(fname);
