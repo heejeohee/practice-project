@@ -72,7 +72,6 @@ void employeeHandler::ChoiceWork(){
         if(PerList[i]->Searchname(fname)==1) {idx=i;break;}
     if(idx==-1) cout<<"목록에 없음\n";
     else {PerList[idx]->Choicework();
-       // PerList[idx]->showName();
     }
 }
 void employeeHandler::Work(){

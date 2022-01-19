@@ -17,10 +17,7 @@ void BaseEmployee:: showrank(){
     else if(Rank==4) cout << "연구원" << endl;
 }
 void BaseEmployee::showwork(){
-    if(worklevel==4) cout << "Work level : 4\n";
-    else if(worklevel==3) cout << "Work level : 3\n";
-    else if(worklevel==2) cout << "Work level : 2\n";
-    else if(worklevel==1) cout << "Work level : 1\n";
+    if(1<=worklevel&&worklevel<=4) cout<<"work level : "<<worklevel<<endl;
     else cout<< "업무 미등록\n";
 }
 void BaseEmployee::getRealtime(){
@@ -39,7 +36,7 @@ void BaseEmployee:: messageOut(){
     if(Type=='A'){
         if(realOut>17)
             cout<<"연장 근무 등록 완료\n"<<endl;
-        else if(realOut<16)
+        else if(realOut<17)
             cout<<"조기 퇴근\n"<<endl;
         else
             cout<<"퇴근 등록 완료\n"<<endl;
@@ -47,7 +44,7 @@ void BaseEmployee:: messageOut(){
     else if(Type=='B'){
         if(realOut>18)
             cout<<"연장 근무 등록 완료\n"<<endl;
-        else if(realOut<17)
+        else if(realOut<18)
             cout<<"조기 퇴근\n"<<endl;
         else
             cout<<"퇴근 등록 완료\n"<<endl;
@@ -55,7 +52,7 @@ void BaseEmployee:: messageOut(){
     else if(Type=='C'){
         if(realOut>19)
             cout<<"연장 근무 등록 완료\n"<<endl;
-        else if(realOut<18)
+        else if(realOut<19)
             cout<<"조기 퇴근\n"<<endl;
         else
             cout<<"퇴근 등록 완료\n"<<endl;
@@ -91,11 +88,6 @@ void BaseEmployee::Choicework(){
     for(int i=0;i<1;i++){
     cout<< "work level : " ;
     cin>>worklevel;
-    if(worklevel>5-Rank){i--; cout<<"work level 조정 필요\n";}
+    if(worklevel>5-Rank||worklevel<1){i--; cout<<"work level 조정 필요\n";}
    }
 }
-void BaseEmployee ::Working(){
-}
-void BaseEmployee ::Pay(){
-}
-

@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     int control=0;
-    //employeeHandler handler;
     employeeHandler listhandler;
     AtypeEmployee *person1= new AtypeEmployee("elsa",'A');
     listhandler.makelist(person1);

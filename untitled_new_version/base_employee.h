@@ -23,8 +23,6 @@ public:
     void messageIn() override;
     int Searchname(string fname) override;
     void Choicework() override;
-    void Working();
-    void Pay();
 };
 
 
