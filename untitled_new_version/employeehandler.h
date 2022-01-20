@@ -14,10 +14,8 @@ class employeeHandler
 public:
     employeeHandler();
     void makelist(BaseEmployee*p);
-    int Getlistnum();
     void Addemployee();
     void ShowAlllist();
-    void ShowAll(int k);
     void Getreal();
     void ChoiceWork();
     void Work();

@@ -1,13 +1,9 @@
 #include "employeehandler.h"
 #include <all_employee.h>
 
-employeeHandler::employeeHandler(){
-}
+employeeHandler::employeeHandler(){}
 void employeeHandler::makelist(BaseEmployee* p){
     PerList[listnum++]=p;
-}
-int employeeHandler::Getlistnum(){
-    return listnum;
 }
 void employeeHandler::Addemployee(){
 
@@ -42,14 +38,12 @@ void employeeHandler::Addemployee(){
 }
 void employeeHandler::ShowAlllist(){
     for(int i=0;i<listnum;i++) {cout<<i+1<<" ";
-        ShowAll(i);
-        cout<<endl;}
-}
-void employeeHandler::ShowAll(int k){
-    PerList[k]->showName();
-    PerList[k]->showtype();
-    PerList[k]->showrank();
-    PerList[k]->showwork();
+        PerList[i]->showName();
+        PerList[i]->showtype();
+        PerList[i]->showrank();
+        PerList[i]->showwork();
+    }
+        cout<<endl;
 }
 void employeeHandler::Getreal(){
     int idx=-1;
