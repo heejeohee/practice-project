@@ -16,11 +16,7 @@ public:
     void makelist(BaseEmployee*p);
     void Addemployee();
     void ShowAlllist();
-    void Getreal();
-    void ChoiceWork();
-    void Work();
-    void getPay();
-
+    void Function(int ctrl);
 };
 
 #endif // EMPLOYEEHANDLER_H

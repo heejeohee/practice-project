@@ -45,7 +45,7 @@ void employeeHandler::ShowAlllist(){
     }
         cout<<endl;
 }
-void employeeHandler::Getreal(){
+void employeeHandler::Function(int ctrl){
     int idx=-1;
     string fname;
     cout<<"이름 : ";
@@ -54,41 +54,9 @@ void employeeHandler::Getreal(){
     for(int i=0;i<listnum;i++)
         if(PerList[i]->Searchname(fname)==1){idx=i;break;}
     if(idx==-1) cout<<"목록에 없음\n";
-    else PerList[idx]->getRealtime();
-}
-void employeeHandler::ChoiceWork(){
-    int idx=-1;
-    string fname;
-    cout<<"이름 : ";
-    cin>> fname;
-
-    for(int i=0;i<listnum;i++)
-        if(PerList[i]->Searchname(fname)==1) {idx=i;break;}
-    if(idx==-1) cout<<"목록에 없음\n";
-    else {PerList[idx]->Choicework();
-    }
-}
-void employeeHandler::Work(){
-    int idx=-1;
-    string fname;
-    cout<<"이름 : ";
-    cin>> fname;
-
-    for(int i=0;i<listnum;i++)
-        if(PerList[i]->Searchname(fname)==1){idx=i;break;}
-    if(idx==-1) cout<<"목록에 없음\n";
-    else PerList[idx]->Working();
-}
-void employeeHandler::getPay(){
-    int idx=-1;
-    string fname;
-    cout<<"이름 : ";
-    cin>> fname;
-
-    for(int i=0;i<listnum;i++)
-        if(PerList[i]->Searchname(fname)==1){ idx=i;break;}
-    if(idx==-1) cout<<"목록에 없음\n";
+    else if(ctrl==2) PerList[idx]->getRealtime();
+    else if(ctrl==3) PerList[idx]->Choicework();
+    else if(ctrl==4) PerList[idx]->Working();
     else PerList[idx]->Pay();
 }
-
 

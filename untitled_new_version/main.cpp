@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     normal_employee *person4= new normal_employee("sben",'B');
     listhandler.makelist(person4);
 
-    while(control<8){
+    while(control!=7){
         cout<<"-------------------------"<<endl;
         cout<< " 1.등록 하기\n 2.출퇴근시간 입력\n 3.업무 등록\n 4.업무 진도\n 5.급여 조회\n 6.직원 목록\n 7.종료"<<endl;
         cout<<"-------------------------"<<endl;
@@ -35,18 +35,13 @@ int main(int argc, char *argv[])
 
         if(control==1)
             listhandler.Addemployee();
-        else if(control==2)
-            listhandler.Getreal();
-        else if(control==3)
-            listhandler.ChoiceWork();
-        else if(control==4)
-            listhandler.Work();
-        else if(control==5)
-            listhandler.getPay();
+        else if(control<6){
+            listhandler.Function(control);
+        }
         else if(control==6) listhandler.ShowAlllist();
-        else if(control==7)   { cout<<"-----Good Bye-----\n"; break;}
-        else cout << "!!ERROR!!"<<endl;
+        else if(control!=7) cout << "!!ERROR!!"<<endl;
     }
+    cout<<"-----Good Bye-----\n";
     return 0;
 
 
