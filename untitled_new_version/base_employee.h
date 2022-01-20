@@ -13,6 +13,7 @@ protected:
     char Type;
 public:
     BaseEmployee(string N, char T, int R);
+    ~BaseEmployee(){};
     void showName();
     void showtype();
     void showrank();

@@ -46,7 +46,6 @@ void BtypeEmployee ::Working(){
         cout<<"\nInsert doing work 'W' or end 'E'\n";
         cin>>ins;
         if(ins=='W') {progress+=1.0/(worklevel*5.0);
-            cout<<"progress : " <<progress<<endl;
             for(int t=0;t<worklevel*10*(1-progress);t++)
                 cout<<"□";--i;
             if(progress>=1.0){cout<<"\nComplete\n"; progress=1.0; break;}}

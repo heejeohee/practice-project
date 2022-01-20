@@ -6,7 +6,7 @@ using namespace std;
 class employee
 {
 public:
-    employee(){};
+    virtual ~employee(){};
     virtual void getRealtime()=0;
     virtual int CalWorkTime()=0;
     virtual void messageOut()=0;
@@ -15,7 +15,6 @@ public:
     virtual void Choicework()=0;
     virtual void Working()=0;
     virtual void Pay()=0;
-    ~employee(){};
 };
 
 
