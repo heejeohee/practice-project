@@ -29,6 +29,7 @@ void BaseEmployee::getRealtime(){
     messageOut();
 }
 int BaseEmployee:: CalWorkTime(){
+    cout << "realOUt: " <<realOut<<"  realIN: "<<realIn <<endl;
     if(Rank==4)     return realOut-realIn-1;    // 근무시간
     else     return realOut-realIn-9;        //기준 근무시간인 8시간과의 차이
 }

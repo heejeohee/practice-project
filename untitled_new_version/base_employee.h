@@ -7,7 +7,7 @@ class BaseEmployee:public employee
 {
 protected:
     int Rank, worklevel=0;
-    int realIn, realOut;
+    int realIn=0, realOut=0;
     double progress=0.0;
     string Name;
     char Type;

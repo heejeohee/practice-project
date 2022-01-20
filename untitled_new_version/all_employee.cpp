@@ -46,6 +46,7 @@ void BtypeEmployee ::Working(){
         cout<<"\nInsert doing work 'W' or end 'E'\n";
         cin>>ins;
         if(ins=='W') {progress+=1.0/(worklevel*5.0);
+            cout<<"progress : " <<progress<<endl;
             for(int t=0;t<worklevel*10*(1-progress);t++)
                 cout<<"□";--i;
             if(progress>=1.0){cout<<"\nComplete\n"; progress=1.0; break;}}
@@ -92,8 +93,12 @@ void CtypeEmployee ::Working(){
     }
 }
 void CtypeEmployee::Pay(){
+    if(realIn!=0){
     int money=300+worklevel*progress*5+CalWorkTime();       //지각비
     cout<<"\n이번 달 급여는 "<<money<<"만원 예정입니다.\n";
+    }
+    else {int money=300+worklevel*progress*5;
+        cout<<"\n이번 달 급여는 "<<money<<"만원 예정입니다.\n";}
 }
 
 
@@ -121,9 +126,12 @@ void normal_employee::Working(){
     }
 }
 void normal_employee::Pay(){
+    if(realIn!=0){
     double todaymoney=CalWorkTime()*1.5;
     double money=todaymoney+19*8*1.5;
     cout<<"\n오늘 급여는 " << todaymoney <<"만원이고, 다른 이벤트 없을 시 이번 달 급여는 "<<money<<"만원 예정입니다.\n";
+    }
+    else cout<<"\n오늘 근무가 등록되지 않았습니다. 다른 이벤트 없을 시 이번 달 급여는 "<<19*8*1.5<<"만원 예정입니다.\n";
 }
 
 

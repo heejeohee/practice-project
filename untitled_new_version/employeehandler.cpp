@@ -37,7 +37,7 @@ void employeeHandler::Addemployee(){
     }
 }
 void employeeHandler::ShowAlllist(){
-    for(int i=0;i<listnum;i++) {cout<<i+1<<" ";
+    for(int i=0;i<listnum;i++) {cout<<"\n"<<i+1<<". ";
         PerList[i]->showName();
         PerList[i]->showtype();
         PerList[i]->showrank();
