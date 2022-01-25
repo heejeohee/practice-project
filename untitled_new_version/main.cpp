@@ -15,8 +15,6 @@ int main(int argc, char *argv[])
 
     int control=0;
     employeeHandler listhandler;
-   /* BaseEmployee *person0=new AtypeEmployee("nana",'A');
-    listhandler.makelist(person0);*/
     AtypeEmployee *person1= new AtypeEmployee("elsa",'A');
     listhandler.makelist(person1);
     BtypeEmployee *person2= new BtypeEmployee("anna",'C');
@@ -32,7 +30,7 @@ int main(int argc, char *argv[])
         cout<<"-------------------------"<<endl;
         cin>>control;
         cout<<"\n";
-        if(cin.fail()) cout<<"!!번호를 입력하세요!!"<<endl;
+        if(cin.fail()){ cout<<"!!번호를 입력하세요!!"<<endl; control=8;}
         cin.clear();            //quite error
         cin.ignore(256,'\n');   //reset control
 

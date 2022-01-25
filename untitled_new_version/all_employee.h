@@ -10,8 +10,6 @@ public:
     ~AtypeEmployee(){};
     void Working() override;
     void Pay() override;
-
-    void TEST(){cout<<"test\n\n";}
 };
 class BtypeEmployee : public BaseEmployee
 {
