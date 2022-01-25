@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstring>
 #include<employee.h>
+#include<base_employee.h>
 #include <all_employee.h>
 #include <employeehandler.h>
 
@@ -14,6 +15,8 @@ int main(int argc, char *argv[])
 
     int control=0;
     employeeHandler listhandler;
+   /* BaseEmployee *person0=new AtypeEmployee("nana",'A');
+    listhandler.makelist(person0);*/
     AtypeEmployee *person1= new AtypeEmployee("elsa",'A');
     listhandler.makelist(person1);
     BtypeEmployee *person2= new BtypeEmployee("anna",'C');

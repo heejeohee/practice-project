@@ -60,7 +60,7 @@ void BtypeEmployee ::Pay(){
 }
 
 
-// //////////C/////cout<<"progress :"<<progress<<endl;////////
+// //////////C/////////////
 
 CtypeEmployee::CtypeEmployee(string name, char timeType):BaseEmployee(name, timeType, 3){}
 
@@ -101,7 +101,7 @@ void CtypeEmployee::Pay(){
 }
 
 
-// ////////////////D/////////////////////////
+// ////////////////D///////////////
 
 normal_employee::normal_employee(string name, char timeType):BaseEmployee(name, timeType, 4){}
 
